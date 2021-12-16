@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+{% for i in users_list %}
+<a href="http://127.0.0.1:5000/user/{{i['id']}}"> {{ i['surname'] }} {{ i['name'] }}</a><br>
+{% endfor %}
+
+<p><h3><a href="/users/add/">Добавить запись</a></h3></p>
+
+</body>
+</html>
