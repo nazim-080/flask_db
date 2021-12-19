@@ -4,8 +4,7 @@ from flask import redirect, render_template, request
 
 app = Flask(__name__)
 
-conn = psycopg2.connect(dbname='tele', user='postgres',
-                        password='nazim080', host='localhost')
+conn = psycopg2.connect()
 cursor = conn.cursor()
 
 sql_query = f"SELECT u_id, f_val, n_val, otc_val, s_val, bldn, bldn_k, app, tele " \
